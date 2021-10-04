@@ -1,6 +1,6 @@
 # Task List
 
-### An application where you can create, filter, delete tasks.
+The App is live at [competent-lamarr-68d693.netlify.app/](https://competent-lamarr-68d693.netlify.app/)
 
 ## Stack and Features
 
