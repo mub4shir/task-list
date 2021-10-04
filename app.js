@@ -4,6 +4,8 @@ const taskList = document.querySelector('.collection');
 const clearBtn = document.querySelector('.clear-tasks');
 const filter = document.querySelector('#filter');
 const taskInput = document.querySelector('#task');
+const card = document.querySelector('body');
+const show = document.querySelector('.show');
 
 // Load all event listeners
 
@@ -22,6 +24,14 @@ function loadEventListners() {
   // Filter tasks event
 
   filter.addEventListener('keyup', filterTasks);
+  card.addEventListener('mousemove', runEvent);
+}
+
+///misc
+function runEvent(e) {
+  show.textContent = `MouseX: ${e.offsetX} MouseY: ${e.offsetY}`;
+
+  document.body.style.backgroundColor = `rgb(${e.offsetX},${e.offsetY}, 50)`;
 }
 
 // Get Tasks from LS
@@ -86,7 +96,7 @@ function addTask(e) {
 
   // Clear input
   taskInput.value = '';
-  console.log(li);
+
   e.preventDefault();
 }
 
